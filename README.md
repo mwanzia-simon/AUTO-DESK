@@ -51,8 +51,8 @@ AutoDesk/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/AutoDesk.git
-cd AutoDesk
+git clone https://github.com/mwanzia-simon/AUTO-DESK
+cd AUTO-DESK
 ```
 
 ### 2. Create a virtual environment
