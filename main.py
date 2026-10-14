@@ -1,6 +1,7 @@
 
 import customtkinter as ctk
 from tkinter import filedialog
+import os
 
 window = ctk.CTk()
 
@@ -9,6 +10,7 @@ window.geometry("800x500")
 
 def choose_folder():
     file_path = filedialog.askdirectory()
+    items = os.listdir(file_path)
     label.configure(text=file_path)
 
 
