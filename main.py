@@ -3,6 +3,6 @@ import customtkinter as ctk
 
 window = ctk.CTk()
 
-window.title("AutoDesk")
+window.title("AutoDesk | Automation Center")
 
 window.mainloop()
