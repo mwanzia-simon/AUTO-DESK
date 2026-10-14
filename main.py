@@ -17,5 +17,5 @@ button = ctk.CTkButton(
     text="Click me!",
     command=button_clicked
     )
-button.pack()
+button.pack(padx=30)
 window.mainloop()
