@@ -11,6 +11,7 @@ window.geometry("800x500")
 def choose_folder():
     file_path = filedialog.askdirectory()
     items = os.listdir(file_path)
+    print(items)
     label.configure(text=file_path)
 
 
