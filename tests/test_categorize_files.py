@@ -9,13 +9,12 @@ folder_path = "C:/Users/dell/Desktop/CODING/MERN STACK PROJECTS/CAMPUS-MARKETPLA
 
 files = os.listdir(folder_path)
 
-file_category = "Unknown file type"
 
 
 for file in files:
     full_path = os.path.join(folder_path,file)
     if os.path.isfile(full_path):
-        print(file)
+        file_category = "Unknown file type"
         file_extension = os.path.splitext(file)[1].lower()
         for category, extensions in file_types.items():
             if file_extension in extensions:
