@@ -9,6 +9,10 @@ window.geometry("800x500")
 def button_clicked():
     # label.configure(text="AutoDesk is running!")
     pass
+
+def greet_user():
+    name = name_entry.get()
+    print(f"hello, ${name}")
     
 # label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
 # label.pack()
@@ -29,11 +33,12 @@ button2 = ctk.CTkButton(
 button3 = ctk.CTkButton(
     window,
     text="Greet me!",
-    command=button_clicked
+    command=greet_user
     )
 
 button1.grid(row=0,column=0,pady=10,padx=10)
 button2.grid(row=0,column=1,pady=10,padx=10)
 button3.grid(row=0,column=2,pady=10,padx=10)
+name_entry.grid(row=1,column=0,pady=10,padx=10)
 
 window.mainloop()
