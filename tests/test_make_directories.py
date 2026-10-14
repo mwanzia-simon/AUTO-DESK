@@ -1,4 +1,5 @@
 import os
+import shutil
 
 folder_path = "C:/Users/dell/Desktop/AutoDeskTest/Images"
 
