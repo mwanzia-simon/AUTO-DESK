@@ -4,6 +4,7 @@ file_types = {
     "Images": [".png", ".jpg", ".jpeg", ".gif", ".webp"],
     "Documents": [".pdf", ".docx", ".txt", ".xlsx",".js",".ts"],
     "Videos": [".mp4", ".mkv", ".mov"],
+    "Code":[".json",".html",".css"]
 }
 folder_path = "C:/Users/dell/Desktop/CODING/MERN STACK PROJECTS/CAMPUS-MARKETPLACE/client"
 
