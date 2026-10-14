@@ -7,15 +7,15 @@ window.title("AutoDesk | Automation Center")
 window.geometry("800x500")
 
 def button_clicked():
-    # label.configure(text="AutoDesk is running!")
-    pass
+    label.configure(text="AutoDesk is running!")
 
 def greet_user():
     name = name_entry.get()
     print(f"hello, {name}")
     
-# label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
-# label.pack()
+label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
+label.grid(row=0,column=0,pady=20,padx=20)
+
 name_entry = ctk.CTkEntry(window,placeholder_text="Enter your name")
 
 button1 = ctk.CTkButton(
