@@ -11,7 +11,7 @@ def button_clicked():
 
 def greet_user():
     name = name_entry.get()
-    label.configure(text=f"Welcome to AutoDesk, {name}!")
+    label.configure(text=f"Hello, {name}!")
     
 label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
 name_entry = ctk.CTkEntry(window,placeholder_text="Enter your name")
