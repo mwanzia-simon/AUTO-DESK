@@ -7,7 +7,13 @@ file_types = {
 
 file = "profile.png"
 
-extension = os.path.splitext(file)[1].lower()
+file_extension = os.path.splitext(file)[1].lower()
 
-if extension in file_types["Images"]:
-    print("This is an image.")
+# if extension in file_types["Images"]:
+#     print("This is an image.")
+
+for category,extensions in file_types.items():
+   if file_extension in file_types[category]:
+       print(f"{file} --> Category: {category}")
+   else:
+       print("Unknown file type")
