@@ -12,7 +12,7 @@ def button_clicked():
 
 def greet_user():
     name = name_entry.get()
-    print(f"hello, ${name}")
+    print(f"hello, {name}")
     
 # label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
 # label.pack()
