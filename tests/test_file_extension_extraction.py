@@ -1,11 +1,15 @@
 import os
 
-file1 = "report.pdf"
-file2 = "report.final.compiled.pdf"
+files = ["report.pdf","my_photo.jpeg","assignment.docx","logo.png"]
 
-name,extension = os.path.splitext(file1)
+# file1 = "report.pdf"
+# file2 = "report.final.compiled.pdf"
 
-print(name)
-print(extension)
+# name,extension = os.path.splitext(file1)
 
-print(os.path.splitext(file2))
+# print(name)
+# print(extension)
+# print(os.path.splitext(file2))
+
+for file in files:
+    print(f"{file} -> Extension: {os.path.splitext(file)[1]}")
