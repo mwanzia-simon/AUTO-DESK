@@ -8,6 +8,9 @@ window.geometry("800x500")
 
 def button_clicked():
     print("The button was clicked!")
+    
+label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
+label.pack()
 
 button = ctk.CTkButton(
     window,
