@@ -38,10 +38,16 @@ button3 = ctk.CTkButton(
     text="Greet me!",
     command=greet_user
     )
+button4 = ctk.CTkButton(
+    window,
+    text="open folder",
+    command=choose_folder
+    )
 
 button1.grid(row=0,column=0,pady=10,padx=10)
 button2.grid(row=0,column=1,pady=10,padx=10)
 button3.grid(row=0,column=2,pady=10,padx=10)
+button4.grid(row=0,column=3,pady=10,padx=10)
 name_entry.grid(row=1,column=0,pady=10,padx=10)
 label.grid(row=2,column=0,pady=10,padx=10)
 
