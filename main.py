@@ -14,8 +14,6 @@ def greet_user():
     print(f"hello, {name}")
     
 label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
-label.grid(row=0,column=0,pady=20,padx=20)
-
 name_entry = ctk.CTkEntry(window,placeholder_text="Enter your name")
 
 button1 = ctk.CTkButton(
@@ -40,5 +38,7 @@ button1.grid(row=0,column=0,pady=10,padx=10)
 button2.grid(row=0,column=1,pady=10,padx=10)
 button3.grid(row=0,column=2,pady=10,padx=10)
 name_entry.grid(row=1,column=0,pady=10,padx=10)
+label.grid(row=2,column=0,pady=10,padx=10)
+
 
 window.mainloop()
