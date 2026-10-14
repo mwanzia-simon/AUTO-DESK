@@ -7,15 +7,25 @@ window.title("AutoDesk | Automation Center")
 window.geometry("800x500")
 
 def button_clicked():
-    label.configure(text="AutoDesk is running!")
+    # label.configure(text="AutoDesk is running!")
+    pass
     
-label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
-label.pack()
+# label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
+# label.pack()
 
-button = ctk.CTkButton(
+button1 = ctk.CTkButton(
     window,
-    text="Click me!",
+    text="File analyser",
     command=button_clicked
     )
-button.pack(padx=30)
+
+button2 = ctk.CTkButton(
+    window,
+    text="Bulk Renamer",
+    command=button_clicked
+    )
+
+button1.grid(row=0,column=0,pady=10,padx=10)
+button2.grid(row=0,column=1,pady=10,padx=10)
+
 window.mainloop()
