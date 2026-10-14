@@ -6,7 +6,7 @@ file_types = {
     "Videos": [".mp4", ".mkv", ".mov"],
 }
 
-file = "profile.png"
+file = "profile.txt"
 file_category = "Unknown file type"
 
 file_extension = os.path.splitext(file)[1].lower()
