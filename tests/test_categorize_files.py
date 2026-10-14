@@ -5,6 +5,9 @@ file_types = {
     "Documents": [".pdf", ".docx", ".txt", ".xlsx"],
     "Videos": [".mp4", ".mkv", ".mov"],
 }
+folder_path = "C:/Users/dell/Desktop/CODING/MERN STACK PROJECTS/CAMPUS-MARKETPLACE/client"
+
+files = os.listdir(folder_path)
 
 file = "profile.txt"
 file_category = "Unknown file type"
