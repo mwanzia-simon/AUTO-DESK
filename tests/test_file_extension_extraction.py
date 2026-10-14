@@ -1,15 +1,16 @@
 import os
 
-files = ["report.pdf","my_photo.jpeg","assignment.docx","logo.png"]
+folder_path = "C:/Users/dell/Desktop/CODING/MERN STACK PROJECTS/CAMPUS-MARKETPLACE/client"
 
-# file1 = "report.pdf"
-# file2 = "report.final.compiled.pdf"
-
-# name,extension = os.path.splitext(file1)
-
-# print(name)
-# print(extension)
-# print(os.path.splitext(file2))
+files = os.listdir(folder_path)
 
 for file in files:
-    print(f"{file} -> Extension: {os.path.splitext(file)[1]}")
+    full_path = os.path.join(folder_path,file)
+    extension = ""
+    if os.path.isfile(full_path):
+        if os.path.splitext(file)[1] != "":
+            extension = os.path.splitext(file)[1]
+        else:
+            extension = "No extension"
+        
+        print(f"{file} -> Extension:{extension}")
