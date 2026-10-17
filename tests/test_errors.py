@@ -1,5 +1,5 @@
 try:
-    file = open("missing_file.txt", "r")
+    file = open("../main.py", "r")
 
 except FileNotFoundError:
     print("The file could not be found!")
