@@ -3,3 +3,6 @@ try:
 
 except FileNotFoundError:
     print("The file could not be found!")
+else:
+    print("File openned succesifully!")
+    file.close()
