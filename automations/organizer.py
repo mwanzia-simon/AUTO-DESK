@@ -22,6 +22,7 @@ def scan_folder(folder_path):
                             file_category = category
                             break
             print(f"FILE: {item} --> Category: {file_category}")
+            os.makedirs(os.path.join(folder_path,file_category),exist_ok=True)
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
 
