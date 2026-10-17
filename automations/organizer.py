@@ -11,7 +11,11 @@ file_types = {
 
 
 def scan_folder(folder_path):
-    items = os.listdir(folder_path)
+    try:
+        items = os.listdir(folder_path)
+    except FileNotFoundError:
+        print("Invalid Path!")
+        return
     
     for item in items:
         full_path = os.path.join(folder_path,item)
