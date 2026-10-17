@@ -17,6 +17,8 @@ def scan_folder(folder_path):
         print("Invalid Path!")
         return
     
+    moved_count = 0
+    
     for item in items:
         full_path = os.path.join(folder_path,item)
         if os.path.isfile(full_path):
