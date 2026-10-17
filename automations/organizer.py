@@ -29,7 +29,11 @@ def scan_folder(folder_path):
                 source = os.path.join(folder_path,item)
                 destination = os.path.join(folder_path,file_category,item)
                 
-                shutil.move(source,destination)
+                if os.path.exists(destination):
+                    print("File already Exists!")
+                else:
+                    shutil.move(source,destination)
+                
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
 
