@@ -7,6 +7,6 @@ def scan_folder(folder_path):
     items = os.listdir(folder_path)
     
     for item in items:
-        print(f"Items: {item}")
+        print(f"ITEM: {item}")
     pass
 
