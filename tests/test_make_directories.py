@@ -1,11 +1,9 @@
 import os
 import shutil
 
-folder_path = "C:/Users/dell/Desktop/AutoDeskTest/Images"
+folder_path = "C:/Users/dell/Desktop/AutoDeskTest"
 
-source = "C:/Users/dell/Desktop/AutoDeskTest/sample.txt"
-destination = "C:/Users/dell/Desktop/AutoDeskTest/Documents/sample.txt"
+source = os.path.join(folder_path,"sample.txt")
+destination = os.path.join(folder_path,"Documents","sample.txt")
 
 shutil.move(source,destination)
-
-os.makedirs(folder_path,exist_ok=True)
