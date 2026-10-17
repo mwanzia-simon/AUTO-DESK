@@ -21,6 +21,7 @@ def scan_folder(folder_path):
                         if file_extension in extensions:
                             file_category = category
                             print(f"FILE: {item} --> Category: {file_category}")
+                            break
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
 
