@@ -25,8 +25,10 @@ def scan_folder(folder_path):
             print(f"FILE: {item} --> Category: {file_category}")
             if file_category != "Unknown file type":
                 os.makedirs(os.path.join(folder_path,file_category),exist_ok=True)
+                
                 source = os.path.join(folder_path,item)
                 destination = os.path.join(folder_path,file_category,item)
+                
                 shutil.move(source,destination)
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
