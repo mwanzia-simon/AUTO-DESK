@@ -30,7 +30,7 @@ def scan_folder(folder_path):
                 destination = os.path.join(folder_path,file_category,item)
                 
                 if os.path.exists(destination):
-                    print("File already Exists!")
+                    print(f"Skipped {item}: File already Exists!")
                 else:
                     shutil.move(source,destination)
                 
