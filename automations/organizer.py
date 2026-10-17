@@ -36,7 +36,10 @@ def scan_folder(folder_path):
                 if os.path.exists(destination):
                     print(f"Skipped {item}: File already Exists!")
                 else:
-                    shutil.move(source,destination)
+                    try:
+                        shutil.move(source,destination)
+                    except OSError:
+                        print(f"An Error occured while moving {item}")
                 
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
