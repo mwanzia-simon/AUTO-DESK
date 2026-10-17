@@ -17,6 +17,9 @@ def scan_folder(folder_path):
         if os.path.isfile(full_path):
             file_category = "Unknown file type"
             file_extension = os.path.splitext(item)[1].lower()
+            for category, extensions in file_types.items():
+                        if file_extension in extensions:
+                            file_category = category
             print(f"FILE: {item}")
         if os.path.isdir(full_path):
             print(f"FOLDER: {item}")
