@@ -2,6 +2,12 @@ import os
 
 folder_path = "C:/Users/dell/Desktop/AutoDeskTest/Documents"
 
+file_types = {
+    "Images": [".png", ".jpg", ".jpeg", ".gif", ".webp"],
+    "Documents": [".pdf", ".docx", ".txt", ".xlsx", ".js", ".ts"],
+    "Videos": [".mp4", ".mkv", ".mov"]
+}
+
 
 def scan_folder(folder_path):
     items = os.listdir(folder_path)
