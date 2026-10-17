@@ -18,11 +18,12 @@ def scan_folder(folder_path):
             file_category = "Unknown file type"
             file_extension = os.path.splitext(item)[1].lower()
             for category, extensions in file_types.items():
-                        if file_extension in extensions:
-                            file_category = category
-                            break
+                if file_extension in extensions:
+                    file_category = category
+                    break
             print(f"FILE: {item} --> Category: {file_category}")
-            os.makedirs(os.path.join(folder_path,file_category),exist_ok=True)
+            if file_category != "Unknown file type":
+                os.makedirs(os.path.join(folder_path,file_category),exist_ok=True)
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
 
