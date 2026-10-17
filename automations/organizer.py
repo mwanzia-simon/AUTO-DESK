@@ -20,7 +20,7 @@ def scan_folder(folder_path):
             for category, extensions in file_types.items():
                         if file_extension in extensions:
                             file_category = category
-            print(f"FILE: {item}")
+                            print(f"FILE: {item} --> Category: {file_category}")
         if os.path.isdir(full_path):
             print(f"FOLDER: {item}")
 
