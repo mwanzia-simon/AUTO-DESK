@@ -11,6 +11,9 @@ window.geometry("800x500")
 frame = ctk.CTkFrame(window)
 frame.pack(expand=True)
 
+controls_frame = ctk.CTkFrame(window)
+results_frame = ctk.CTkFrame(window)
+
 selected_folder = ""
 
 def choose_folder():
