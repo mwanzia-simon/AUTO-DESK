@@ -59,9 +59,9 @@ def run_organizer():
         failed_label.configure(text=f"FAILED\n{failed}")
         if success == False:
             organization_info_label.configure(text="Could not access the selected folder.")
-        if failed == 0:
+        elif success and failed == 0:
             organization_info_label.configure(text="Organization complete.")
-        else:
+        elif success and failed > 0:
             organization_info_label.configure(text="Organization complete with errors.")         
     else:
         organization_info_label.configure(text="Please select a folder!")
