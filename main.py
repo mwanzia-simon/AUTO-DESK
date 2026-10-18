@@ -22,7 +22,7 @@ label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
 
 button1 = ctk.CTkButton(
     window,
-    text="File analyser",
+    text="Run Organizer",
     command=run_organizer
     )
 
