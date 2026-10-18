@@ -21,6 +21,11 @@ results_frame = ctk.CTkFrame(window)
 controls_frame.pack(padx=20,pady=10,fill="x")
 results_frame.pack(padx=20,pady=10,fill="x")
 
+controls_frame.grid_columnconfigure(0,weight=1)
+controls_frame.grid_columnconfigure(3,weight=1)
+
+results_frame.grid_columnconfigure(0,weight=1)
+
 selected_folder = ""
 
 def choose_folder():
