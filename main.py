@@ -14,6 +14,9 @@ frame.pack(expand=True)
 controls_frame = ctk.CTkFrame(window)
 results_frame = ctk.CTkFrame(window)
 
+controls_frame.pack()
+results_frame.pack()
+
 selected_folder = ""
 
 def choose_folder():
