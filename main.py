@@ -21,8 +21,8 @@ results_frame = ctk.CTkFrame(window)
 controls_frame.pack(padx=20,pady=10,fill="x")
 results_frame.pack(padx=20,pady=10,fill="x")
 
-controls_frame.grid_columnconfigure(0,weight=1)
-controls_frame.grid_columnconfigure(3,weight=1)
+# controls_frame.grid_columnconfigure(0,weight=1)
+# controls_frame.grid_columnconfigure(3,weight=1)
 
 results_frame.grid_columnconfigure(0,weight=1)
 
@@ -46,6 +46,7 @@ def run_organizer():
     
 label = ctk.CTkLabel(controls_frame,text="Welcome to AutoDesk!")
 label2 = ctk.CTkLabel(results_frame,text="File Info.")
+app_name =ctk.CTkLabel(controls_frame,text="AutoDesk - File Organizer")
 
 button1 = ctk.CTkButton(
     controls_frame,
@@ -60,9 +61,9 @@ button4 = ctk.CTkButton(
     )
 
 button1.grid(row=0,column=0,pady=10,padx=10)
-button4.grid(row=0,column=3,pady=10,padx=10)
+button4.grid(row=0,column=1,pady=10,padx=10)
 label.grid(row=2,column=0,pady=10,padx=10)
-label2.grid(row=0,column=0,pady=10,padx=10)
+label2.grid(row=0,column=0,pady=10,padx=10,sticky="ew")
 
 
 window.mainloop()
