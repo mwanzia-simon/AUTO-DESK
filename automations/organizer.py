@@ -16,6 +16,9 @@ def scan_folder(folder_path):
     except FileNotFoundError:
         print("Invalid Path!")
         return 0,0,0
+    except PermissionError:
+        print("Access Denied!")
+        return 0,0,0
     
     moved_count = 0
     skipped_count = 0
