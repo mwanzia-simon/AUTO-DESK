@@ -19,6 +19,7 @@ def scan_folder(folder_path):
     
     moved_count = 0
     skipped_count = 0
+    failed_count = 0
     
     for item in items:
         full_path = os.path.join(folder_path,item)
