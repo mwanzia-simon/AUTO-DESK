@@ -18,8 +18,8 @@ controls_frame = ctk.CTkFrame(
     )
 results_frame = ctk.CTkFrame(window)
 
-controls_frame.pack(pady=10)
-results_frame.pack(pady=10)
+controls_frame.pack(padx=20,pady=10,fill="x")
+results_frame.pack(padx=20,pady=10,fill="x")
 
 selected_folder = ""
 
