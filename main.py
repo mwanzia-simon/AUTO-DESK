@@ -62,8 +62,8 @@ open_folder_btn = ctk.CTkButton(
 
 # controls_frame
 app_name.grid(row=0,column=0,pady=10,padx=10)
-run_organizer_btn.grid(row=0,column=0,pady=10,padx=10)
 open_folder_btn.grid(row=0,column=1,pady=10,padx=10)
+run_organizer_btn.grid(row=0,column=0,pady=10,padx=10)
 label.grid(row=2,column=0,pady=10,padx=10)
 
 #  results_frame 
