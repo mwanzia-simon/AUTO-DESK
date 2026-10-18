@@ -21,6 +21,7 @@ def choose_folder():
 def run_organizer():
     if selected_folder:
         moved,skipped,failed = scan_folder(selected_folder)
+        label2.configure(text=f"Moved:{moved} Skipped:{skipped} Failed:{failed}")
     else:
         print("Please select a folder!")
 
