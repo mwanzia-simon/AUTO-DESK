@@ -60,9 +60,12 @@ button4 = ctk.CTkButton(
     command=choose_folder
     )
 
+# controls_frame
 button1.grid(row=0,column=0,pady=10,padx=10)
 button4.grid(row=0,column=1,pady=10,padx=10)
 label.grid(row=2,column=0,pady=10,padx=10)
+
+#  results_frame 
 label2.grid(row=0,column=0,pady=10,padx=10,sticky="ew")
 
 
