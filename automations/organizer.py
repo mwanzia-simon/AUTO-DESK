@@ -18,6 +18,7 @@ def scan_folder(folder_path):
         return
     
     moved_count = 0
+    skipped_count = 0
     
     for item in items:
         full_path = os.path.join(folder_path,item)
@@ -40,7 +41,7 @@ def scan_folder(folder_path):
                 else:
                     try:
                         shutil.move(source,destination)
-                        moved_count = moved_count + 1
+                        moved_count += 1
                     except OSError as error:
                         print(f"Could not move {item} : {error}")
                 
