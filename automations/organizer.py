@@ -50,9 +50,11 @@ def scan_folder(folder_path):
                 
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
-    print(f"MOVED FILES: {moved_count}")
-    print(f"SKIPPED FILES: {skipped_count}")
-    print(f"FAILED FILES: {failed_count}")
+    return moved_count,skipped_count,failed_count
+   
 
-scan_folder(folder_path)
+moved,skipped,failed = scan_folder(folder_path)
+print(f"Moved: {moved}")
+print(f"Skipped: {skipped}")
+print(f"Failed: {failed}")
 
