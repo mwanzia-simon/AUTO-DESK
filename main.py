@@ -20,12 +20,13 @@ def choose_folder():
 
 def run_organizer():
     if selected_folder:
-        scan_folder(selected_folder)
+        moved,skipped,failed = scan_folder(selected_folder)
     else:
         print("Please select a folder!")
 
     
 label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
+label2 = ctk.CTkLabel(window,text="File Info.")
 
 button1 = ctk.CTkButton(
     window,
@@ -42,6 +43,7 @@ button4 = ctk.CTkButton(
 button1.grid(row=0,column=0,pady=10,padx=10)
 button4.grid(row=0,column=3,pady=10,padx=10)
 label.grid(row=2,column=0,pady=10,padx=10)
+label2.grid(row=3,column=0,pady=10,padx=10)
 
 
 window.mainloop()
