@@ -18,7 +18,10 @@ def choose_folder():
        
 
 def run_organizer():
-    print("AutoDesk organizer started!")
+    if selected_folder:
+        print(f"Selected Folder: {selected_folder}")
+    else:
+        print("Please select a folder!")
 
     
 label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
