@@ -77,7 +77,13 @@ selected_folder_label.grid(
     )
 
 #  results_frame 
-organization_info_label.grid(row=0,column=0,pady=10,padx=10,sticky="ew")
+organization_info_label.grid(
+    row=0,
+    column=0,
+    pady=10,
+    padx=10,
+    sticky="ew"
+    )
 
 
 window.mainloop()
