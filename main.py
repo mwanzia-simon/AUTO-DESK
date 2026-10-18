@@ -57,7 +57,7 @@ def run_organizer():
         moved_label.configure(text=f"MOVED\n{moved}")
         skipped_label.configure(text=f"SKIPPED\n{skipped}")
         failed_label.configure(text=f"FAILED\n{failed}")
-        if success == False:
+        if not success:
             organization_info_label.configure(text="Could not access the selected folder.")
         elif success and failed == 0:
             organization_info_label.configure(text="Organization complete.")
