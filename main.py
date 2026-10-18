@@ -104,7 +104,8 @@ selected_folder_label = ctk.CTkLabel(
     text="No folder selected",
     text_color="#94A3B8",
     anchor="w",
-    font=ctk.CTkFont(size=13)
+    font=ctk.CTkFont(size=13),
+    wraplength=650
     )
 organization_info_label = ctk.CTkLabel(
     results_frame,
