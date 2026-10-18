@@ -5,7 +5,10 @@ def get_scan_results():
      failed_count = 2
      return moved_count,skipped_count,failed_count
  
-result = get_scan_results()
-print(result)
+moved,skipped,failed = get_scan_results()
+
+print(f"moved: {moved}")
+print(f"skipped: {skipped}")
+print(f"failed: {failed}")
  
      
