@@ -48,21 +48,22 @@ label = ctk.CTkLabel(controls_frame,text="Welcome to AutoDesk!")
 label2 = ctk.CTkLabel(results_frame,text="File Info.")
 app_name =ctk.CTkLabel(controls_frame,text="AutoDesk - File Organizer")
 
-button1 = ctk.CTkButton(
+run_organizer_btn = ctk.CTkButton(
     controls_frame,
     text="Run Organizer",
     command=run_organizer
     )
 
-button4 = ctk.CTkButton(
+open_folder_btn = ctk.CTkButton(
     controls_frame,
     text="open folder",
     command=choose_folder
     )
 
 # controls_frame
-button1.grid(row=0,column=0,pady=10,padx=10)
-button4.grid(row=0,column=1,pady=10,padx=10)
+app_name.grid(row=0,column=0,pady=10,padx=10)
+run_organizer_btn.grid(row=0,column=0,pady=10,padx=10)
+open_folder_btn.grid(row=0,column=1,pady=10,padx=10)
 label.grid(row=2,column=0,pady=10,padx=10)
 
 #  results_frame 
