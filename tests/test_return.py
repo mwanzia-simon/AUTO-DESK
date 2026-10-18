@@ -1,4 +1,3 @@
-
 def get_scan_results():
      moved_count = 15
      skipped_count = 3
