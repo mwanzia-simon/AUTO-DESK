@@ -66,7 +66,7 @@ def scan_folder(folder_path):
    
 
 if __name__ == "__main__":
-    moved,skipped,failed = scan_folder(folder_path)
+    moved,skipped,failed,success = scan_folder(folder_path)
     print(f"Moved: {moved}")
     print(f"Skipped: {skipped}")
     print(f"Failed: {failed}")
