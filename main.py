@@ -11,7 +11,11 @@ window.geometry("800x500")
 # frame = ctk.CTkFrame(window)
 # frame.pack(expand=True)
 
-controls_frame = ctk.CTkFrame(window)
+controls_frame = ctk.CTkFrame(
+    window,
+    corner_radius=12,
+    fg_color="#1E293B"
+    )
 results_frame = ctk.CTkFrame(window)
 
 controls_frame.pack(pady=10)
