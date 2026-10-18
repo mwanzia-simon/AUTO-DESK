@@ -38,7 +38,8 @@ controls_frame.grid_columnconfigure(0,weight=1)
 controls_frame.grid_columnconfigure(1,weight=0)
 
 results_frame.grid_columnconfigure(0,weight=1)
-results_frame.grid_rowconfigure(0,weight=1)
+results_frame.grid_columnconfigure(1,weight=1)
+results_frame.grid_columnconfigure(2,weight=1)
 
 selected_folder = ""
 
@@ -53,11 +54,48 @@ def choose_folder():
 def run_organizer():
     if selected_folder:
         moved,skipped,failed = scan_folder(selected_folder)
-        organization_info_label.configure(text=f"Moved:{moved}\n\n Skipped:{skipped}\n\n Failed:{failed}")
+        moved_label.configure(text=f"MOVED\n{moved}")
+        skipped_label.configure(text=f"SKIPPED\n{skipped}")
+        failed_label.configure(text=f"FAILED\n{failed}")
+        organization_info_label.configure(text="Organization complete.")
     else:
         organization_info_label.configure(text="Please select a folder!")
 
-    
+results_title = ctk.CTkLabel(
+    results_frame,
+    text="Organization Results",
+    text_color="#F8FAFC",
+    anchor="w",
+    font=ctk.CTkFont(size=18, weight="bold")
+    )
+moved_label = ctk.CTkLabel(
+    results_frame,
+    text="MOVED\n0",
+    text_color="#86EFAC",
+    fg_color="#123528",
+    corner_radius=12,
+    font=ctk.CTkFont(size=15, weight="bold"),
+    height=76
+    )
+skipped_label = ctk.CTkLabel(
+    results_frame,
+    text="SKIPPED\n0",
+    text_color="#FCD34D",
+    fg_color="#3B2F16",
+    corner_radius=12,
+    font=ctk.CTkFont(size=15, weight="bold"),
+    height=76
+    )
+failed_label = ctk.CTkLabel(
+    results_frame,
+    text="FAILED\n0",
+    text_color="#FCA5A5",
+    fg_color="#3B2025",
+    corner_radius=12,
+    font=ctk.CTkFont(size=15, weight="bold"),
+    height=76
+    )
+
 selected_folder_label = ctk.CTkLabel(
     controls_frame,
     text="No folder selected",
@@ -67,7 +105,7 @@ selected_folder_label = ctk.CTkLabel(
     )
 organization_info_label = ctk.CTkLabel(
     results_frame,
-    text="Your organization summary will appear here.",
+    text="Choose a folder and organize it to see a summary.",
     text_color="#CBD5E1",
     anchor="nw",
     justify="left",
@@ -127,13 +165,11 @@ selected_folder_label.grid(
 run_organizer_btn.grid(row=3, column=0, columnspan=2, pady=(0, 20), padx=22, sticky="ew")
 
 #  results_frame 
-organization_info_label.grid(
-    row=0,
-    column=0,
-    pady=0,
-    padx=0,
-    sticky="nsew"
-    )
+results_title.grid(row=0, column=0, columnspan=3, padx=20, pady=(18, 12), sticky="ew")
+moved_label.grid(row=1, column=0, padx=(20, 6), pady=(0, 12), sticky="ew")
+skipped_label.grid(row=1, column=1, padx=6, pady=(0, 12), sticky="ew")
+failed_label.grid(row=1, column=2, padx=(6, 20), pady=(0, 12), sticky="ew")
+organization_info_label.grid(row=2, column=0, columnspan=3, padx=20, pady=(4, 18), sticky="nw")
 
 
 window.mainloop()
