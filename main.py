@@ -20,7 +20,7 @@ def choose_folder():
 
 def run_organizer():
     if selected_folder:
-        print(f"Selected Folder: {selected_folder}")
+        scan_folder(selected_folder)
     else:
         print("Please select a folder!")
 
