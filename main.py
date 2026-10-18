@@ -56,7 +56,7 @@ run_organizer_btn = ctk.CTkButton(
 
 open_folder_btn = ctk.CTkButton(
     controls_frame,
-    text="open folder",
+    text="Browse",
     command=choose_folder
     )
 
