@@ -35,7 +35,13 @@ def scan_folder(folder_path):
                     break
             print(f"FILE: {item} --> Category: {file_category}")
             if file_category != "Unknown file type":
-                os.makedirs(os.path.join(folder_path,file_category),exist_ok=True)
+                
+                try:
+                    os.makedirs(os.path.join(folder_path,file_category),exist_ok=True)
+                except OSError:
+                    print("Error occured while creating the folder!")
+                    failed_count += 1
+                    continue
                 
                 source = os.path.join(folder_path,item)
                 destination = os.path.join(folder_path,file_category,item)
