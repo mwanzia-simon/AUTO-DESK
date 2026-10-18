@@ -39,13 +39,13 @@ def choose_folder():
 def run_organizer():
     if selected_folder:
         moved,skipped,failed = scan_folder(selected_folder)
-        label2.configure(text=f"Moved:{moved}\n\n Skipped:{skipped}\n\n Failed:{failed}")
+        organization_info_label.configure(text=f"Moved:{moved}\n\n Skipped:{skipped}\n\n Failed:{failed}")
     else:
-        label2.configure(text="Please select a folder!")
+        organization_info_label.configure(text="Please select a folder!")
 
     
 selected_folder_label = ctk.CTkLabel(controls_frame,text="")
-label2 = ctk.CTkLabel(results_frame,text="File Info.")
+organization_info_label = ctk.CTkLabel(results_frame,text="File Info.")
 app_name =ctk.CTkLabel(controls_frame,text="AutoDesk - File Organizer")
 select_folder_text = ctk.CTkLabel(controls_frame,text="Select the folder you want to organize.")
 
@@ -69,7 +69,7 @@ run_organizer_btn.grid(row=3,column=2,pady=10,padx=10)
 selected_folder_label.grid(row=2,column=0,pady=10,padx=10)
 
 #  results_frame 
-label2.grid(row=0,column=0,pady=10,padx=10,sticky="ew")
+organization_info_label.grid(row=0,column=0,pady=10,padx=10,sticky="ew")
 
 
 window.mainloop()
