@@ -62,7 +62,7 @@ def scan_folder(folder_path):
                 
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
-    return moved_count,skipped_count,failed_count
+    return moved_count,skipped_count,failed_count,success
    
 
 if __name__ == "__main__":
