@@ -11,14 +11,17 @@ file_types = {
 
 
 def scan_folder(folder_path):
+    success = True
     try:
         items = os.listdir(folder_path)
     except FileNotFoundError:
         print("Invalid Path!")
-        return 0,0,0
+        success = False
+        return 0,0,0,success
     except PermissionError:
         print("Access Denied!")
-        return 0,0,0
+        success = False
+        return 0,0,0,success
     
     moved_count = 0
     skipped_count = 0
