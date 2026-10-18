@@ -33,7 +33,7 @@ def choose_folder():
     file_path = filedialog.askdirectory()
     if file_path:
         selected_folder = file_path
-        selected_folder_label.configure(text=selected_folder)
+        selected_folder_label.configure(text=f"SELECTED FOLDER: {selected_folder}")
        
 
 def run_organizer():
