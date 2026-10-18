@@ -15,6 +15,7 @@ def choose_folder():
     file_path = filedialog.askdirectory()
     if file_path:
         selected_folder = file_path
+        label.configure(text=selected_folder)
        
 
 def run_organizer():
