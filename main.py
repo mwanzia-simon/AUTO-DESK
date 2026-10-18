@@ -14,8 +14,8 @@ window.geometry("800x500")
 controls_frame = ctk.CTkFrame(window)
 results_frame = ctk.CTkFrame(window)
 
-controls_frame.pack()
-results_frame.pack()
+controls_frame.pack(pady=10)
+results_frame.pack(pady=10)
 
 selected_folder = ""
 
