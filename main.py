@@ -44,7 +44,7 @@ def run_organizer():
         label2.configure(text="Please select a folder!")
 
     
-label = ctk.CTkLabel(controls_frame,text="Welcome to AutoDesk!")
+selected_folder_label = ctk.CTkLabel(controls_frame,text="")
 label2 = ctk.CTkLabel(results_frame,text="File Info.")
 app_name =ctk.CTkLabel(controls_frame,text="AutoDesk - File Organizer")
 select_folder_text = ctk.CTkLabel(controls_frame,text="Select the folder you want to organize.")
@@ -65,8 +65,8 @@ open_folder_btn = ctk.CTkButton(
 app_name.grid(row=0,column=0,pady=10,padx=10)
 open_folder_btn.grid(row=1,column=1,pady=10,padx=10)
 select_folder_text.grid(row=1,column=0,pady=10,padx=10)
-run_organizer_btn.grid(row=2,column=2,pady=10,padx=10)
-label.grid(row=2,column=0,pady=10,padx=10)
+run_organizer_btn.grid(row=3,column=2,pady=10,padx=10)
+selected_folder_label.grid(row=2,column=0,pady=10,padx=10)
 
 #  results_frame 
 label2.grid(row=0,column=0,pady=10,padx=10,sticky="ew")
