@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from tkinter import filedialog
+from automations.organizer import scan_folder
 import os
 
 window = ctk.CTk()
