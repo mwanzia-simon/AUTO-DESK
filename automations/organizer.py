@@ -38,6 +38,7 @@ def scan_folder(folder_path):
                 
                 if os.path.exists(destination):
                     print(f"Skipped {item}: File already Exists!")
+                    skipped_count += 1
                 else:
                     try:
                         shutil.move(source,destination)
@@ -48,6 +49,7 @@ def scan_folder(folder_path):
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
     print(f"MOVED FILES: {moved_count}")
+    print(f"SKIPPED FILES: {skipped_count}")
 
 scan_folder(folder_path)
 
