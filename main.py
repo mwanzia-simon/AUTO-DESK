@@ -21,9 +21,9 @@ def choose_folder():
 def run_organizer():
     if selected_folder:
         moved,skipped,failed = scan_folder(selected_folder)
-        label2.configure(text=f"Moved:{moved} Skipped:{skipped} Failed:{failed}")
+        label2.configure(text=f"Moved:{moved}\n Skipped:{skipped}\n Failed:{failed}")
     else:
-        print("Please select a folder!")
+        label2.configure(text="Please select a folder!")
 
     
 label = ctk.CTkLabel(window,text="Welcome to AutoDesk!")
