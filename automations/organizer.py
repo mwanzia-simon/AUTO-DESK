@@ -38,8 +38,8 @@ def scan_folder(folder_path):
                 
                 try:
                     os.makedirs(os.path.join(folder_path,file_category),exist_ok=True)
-                except OSError:
-                    print("Error occured while creating the folder!")
+                except OSError as error:
+                    print(f"Could not create folder {file_category} : {error}")
                     failed_count += 1
                     continue
                 
