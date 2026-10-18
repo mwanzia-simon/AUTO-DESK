@@ -9,7 +9,7 @@ window.title("AutoDesk | Automation Center")
 window.geometry("800x500")
 
 frame = ctk.CTkFrame(window)
-frame.pack()
+frame.pack(expand=True)
 
 selected_folder = ""
 
