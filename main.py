@@ -8,6 +8,8 @@ window = ctk.CTk()
 window.title("AutoDesk | Automation Center")
 window.geometry("800x500")
 
+frame = ctk.CTkFrame(window)
+
 selected_folder = ""
 
 def choose_folder():
