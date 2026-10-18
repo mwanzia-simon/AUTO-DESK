@@ -32,17 +32,17 @@ def run_organizer():
         label2.configure(text="Please select a folder!")
 
     
-label = ctk.CTkLabel(frame,text="Welcome to AutoDesk!")
-label2 = ctk.CTkLabel(frame,text="File Info.")
+label = ctk.CTkLabel(controls_frame,text="Welcome to AutoDesk!")
+label2 = ctk.CTkLabel(results_frame,text="File Info.")
 
 button1 = ctk.CTkButton(
-    frame,
+    controls_frame,
     text="Run Organizer",
     command=run_organizer
     )
 
 button4 = ctk.CTkButton(
-    frame,
+    controls_frame,
     text="open folder",
     command=choose_folder
     )
