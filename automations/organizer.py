@@ -53,8 +53,9 @@ def scan_folder(folder_path):
     return moved_count,skipped_count,failed_count
    
 
-moved,skipped,failed = scan_folder(folder_path)
-print(f"Moved: {moved}")
-print(f"Skipped: {skipped}")
-print(f"Failed: {failed}")
+if __name__ == "__main__":
+    moved,skipped,failed = scan_folder(folder_path)
+    print(f"Moved: {moved}")
+    print(f"Skipped: {skipped}")
+    print(f"Failed: {failed}")
 
