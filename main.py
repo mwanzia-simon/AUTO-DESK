@@ -8,8 +8,8 @@ window = ctk.CTk()
 window.title("AutoDesk | Automation Center")
 window.geometry("800x500")
 
-frame = ctk.CTkFrame(window)
-frame.pack(expand=True)
+# frame = ctk.CTkFrame(window)
+# frame.pack(expand=True)
 
 controls_frame = ctk.CTkFrame(window)
 results_frame = ctk.CTkFrame(window)
