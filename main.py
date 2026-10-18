@@ -8,12 +8,14 @@ window = ctk.CTk()
 window.title("AutoDesk | Automation Center")
 window.geometry("800x500")
 
+selected_folder = ""
+
 def choose_folder():
+    global selected_folder
     file_path = filedialog.askdirectory()
     if file_path:
-        items = os.listdir(file_path)
-        print(items)
-        label.configure(text=file_path)
+        selected_folder = file_path
+       
 
 def run_organizer():
     print("AutoDesk organizer started!")
