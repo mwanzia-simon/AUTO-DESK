@@ -15,7 +15,7 @@ def scan_folder(folder_path):
         items = os.listdir(folder_path)
     except FileNotFoundError:
         print("Invalid Path!")
-        return
+        return 0,0,0
     
     moved_count = 0
     skipped_count = 0
