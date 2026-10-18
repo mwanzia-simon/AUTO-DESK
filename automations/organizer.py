@@ -46,11 +46,13 @@ def scan_folder(folder_path):
                         moved_count += 1
                     except OSError as error:
                         print(f"Could not move {item} : {error}")
+                        failed_count += 1
                 
         elif os.path.isdir(full_path):
             print(f"FOLDER: {item}")
     print(f"MOVED FILES: {moved_count}")
     print(f"SKIPPED FILES: {skipped_count}")
+    print(f"FAILED FILES: {failed_count}")
 
 scan_folder(folder_path)
 
