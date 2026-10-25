@@ -1,107 +1,122 @@
-# AutoDesk 
+# AutoDesk | Automation Center
 
-**Your Personal Automation Center**
+AutoDesk is a Python desktop application designed to simplify everyday tasks through automation. Its first implemented feature is a **file organizer** that automatically sorts files into categories based on their file extensions.
 
-AutoDesk is a Python desktop application designed to simplify repetitive computer tasks through a clean, user-friendly graphical interface. It brings useful file management and automation tools together in one place.
+The application uses CustomTkinter to provide a graphical user interface, allowing users to select a folder and organize its contents without manually moving files.
 
-The project is being built as a hands-on exploration of Python, desktop GUI development, and practical automation.
+## Features
 
-##  Features
+- **Folder Selection:** Choose a folder to organize using a file browser.
+- **Automatic File Organization:** Sort supported files into category folders.
+- **File Categories:**
+  - **Images:** `.png`, `.jpg`, `.jpeg`, `.gif`, `.webp`
+  - **Documents:** `.pdf`, `.docx`, `.txt`, `.xlsx`, `.js`, `.ts`
+  - **Videos:** `.mp4`, `.mkv`, `.mov`
+- **Duplicate Protection:** Skip files when a file with the same name already exists in the destination folder.
+- **Operation Statistics:** Display the number of moved, skipped, and failed files.
+- **Error Handling:** Handle common filesystem errors, including inaccessible folders and failed file operations.
+- **Graphical Interface:** A dark-themed interface built with CustomTkinter.
 
-* **File Organizer** — Automatically sort files into categorized folders based on file type.
-* **Folder Analyzer** — Analyze folders to view file counts, file types, and total storage usage.
-* **Batch File Renamer** — Rename multiple files using customizable prefixes and numbering.
-* **Visual Dashboard** — Access automation tools through a modern desktop interface.
-* **Task History** — Track completed automation tasks and their results.
+## Tech Stack
 
-> Features are planned for implementation as development progresses.
+- **Python** — Application logic and file operations.
+- **CustomTkinter** — Desktop graphical user interface.
+- **OS and Shutil modules** — Folder navigation, directory creation, and file movement.
 
-##  Tech Stack
-
-* **Python** — Core application logic and automation.
-* **CustomTkinter** — Modern graphical user interface.
-* **pathlib** — Filesystem navigation and path management.
-* **shutil** — File operations and organization.
-* **unittest / pytest** — Testing and reliability.
-
-##  Project Structure
+## Project Structure
 
 ```text
 AutoDesk/
 ├── main.py
 ├── automations/
-│   ├── organizer.py
-│   ├── analyzer.py
-│   └── renamer.py
+│   ├── __init__.py
+│   └── organizer.py
 ├── tests/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
 ```
 
-*The structure may evolve as the project grows.*
+*Note: The structure above represents the intended project layout. Adjust it to match your actual repository.*
 
-##  Getting Started
+## Getting Started
 
 ### Prerequisites
 
-* Python 3.11 or newer
-* Git
+- Python 3.10 or later recommended.
+- Git (optional, for cloning the repository).
 
-### 1. Clone the repository
+### Installation
 
-```bash
-git clone https://github.com/mwanzia-simon/AUTO-DESK
-cd AUTO-DESK
-```
+1. Clone the repository:
 
-### 2. Create a virtual environment
+   ```bash
+   git clone https://github.com/mwanzia-simon/AUTO-DESK
+   ```
 
-**Windows:**
+2. Navigate into the project directory:
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-```
+   ```bash
+   cd AutoDesk
+   ```
 
-### 3. Install dependencies
+3. Create and activate a virtual environment:
 
-```bash
-python -m pip install customtkinter
-```
+   **Windows:**
 
-### 4. Run the application
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate
+   ```
+
+4. Install the dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   If your requirements file does not yet list CustomTkinter, install it with:
+
+   ```bash
+   pip install customtkinter
+   ```
+
+### Running AutoDesk
+
+Start the application from the project root:
 
 ```bash
 python main.py
 ```
 
-##  Project Goals
+Select a folder, click **Organize files**, and review the operation statistics in the results panel.
 
-* Build a functional desktop automation dashboard.
-* Practice modular Python development.
-* Learn graphical user interface design.
-* Implement safe and reliable filesystem operations.
-* Improve error handling, testing, and code organization.
+## How It Works
 
-##  Safety
+1. The user selects a folder through the graphical interface.
+2. AutoDesk scans the selected folder's immediate contents.
+3. Each supported file is identified by its extension.
+4. Category folders are created when necessary.
+5. Supported files are moved into their respective folders.
+6. Files with an existing destination filename are skipped.
+7. The application reports the number of moved, skipped, and failed files.
 
-AutoDesk interacts with files on your computer. Always test file operations using sample folders first. Preview changes before applying them, handle duplicate filenames safely, and avoid modifying important files without confirmation.
+## Current Development Status
 
-##  Roadmap
+**Implemented:** File organization with a CustomTkinter graphical interface.
 
-* [ ] Create the main dashboard and navigation.
-* [ ] Implement the file organizer.
-* [ ] Add folder analysis and storage statistics.
-* [ ] Implement batch file renaming with previews.
-* [ ] Add task history and progress indicators.
-* [ ] Improve error handling and automated tests.
-* [ ] Package the application for desktop use.
+**Future Improvements:**
+- Display individual file operations in a scrollable activity panel.
+- Add more automation features.
+- Improve error reporting and user feedback.
+- Continue improving the interface and overall user experience.
 
-##  Contributing
+## Purpose
 
-Suggestions, bug reports, and improvements are welcome. Feel free to fork the repository and experiment with new automation features.
+AutoDesk is a hands-on software development project focused on learning Python, desktop application development, file handling, error handling, and automation.
 
-##  License
+The project will evolve as additional features are designed, implemented, and tested.
 
-This project is currently a learning project. A license can be added when the distribution terms are decided.
+## License
+
+No license has been specified yet. A license can be added when the project's distribution terms are decided.
