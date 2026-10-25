@@ -57,7 +57,7 @@ AutoDesk/
 2. Navigate into the project directory:
 
    ```bash
-   cd AutoDesk
+   cd AUTO-DESK
    ```
 
 3. Create and activate a virtual environment:
