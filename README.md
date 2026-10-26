@@ -1,4 +1,4 @@
-# AutoDesk | Automation Center
+# AutoDesk 
 
 AutoDesk is a Python desktop application designed to simplify everyday tasks through automation. Its first implemented feature is a **file organizer** that automatically sorts files into categories based on their file extensions.
 
